@@ -41,7 +41,7 @@ export default function Services() {
 
   return (
     <section
-      id="works"
+      id="services"
       className="bg-agency-green px-2 md:px-5 pb-4 md:pb-5 pt-10 md:pt-20"
     >
       <div className="relative bg-agency-light rounded-[2rem] md:rounded-[3rem] w-full max-w-7xl mx-auto p-6 md:p-16 overflow-hidden">

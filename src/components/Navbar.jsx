@@ -66,7 +66,13 @@ const FlipLink = ({ children, href, onClick, className }) => {
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = ["About Us", "Works", "Blog", "Contact"];
+  // UPDATED: Converted to an array of objects to handle distinct routing types
+  const navLinks = [
+    { name: "About Us", href: "/#about-us" }, // Anchors to homepage section
+    { name: "Services", href: "/#services" }, // Anchors to homepage section (Replaced Blog)
+    { name: "Works", href: "/works" }, // Points to separate Works page
+    { name: "Contact", href: "/contact" }, // Points to separate Contact page
+  ];
 
   return (
     <motion.div
@@ -84,18 +90,10 @@ export default function Navbar() {
       <nav className="bg-agency-green rounded-full px-2 flex items-center justify-between w-[80%] md:w-fit shadow-lg transition-all duration-300">
         {/* --- CUSTOM LOGO SECTION --- */}
         <Link href="/" className="ml-2 md:ml-3 shrink-0 flex items-center">
-          {/* 
-            SOLUTION: 
-            1. We restrict the height (h-10) to keep the navbar thin and tight.
-            2. We give it width (w-32 to w-40) so a horizontal logo has room.
-            3. We use scale-[1.35] (or adjust to 1.5 etc.) to make it visually pop out 
-               without physically stretching the green navbar background.
-          */}
           <div className="relative w-32 h-20 flex items-center">
             <img
               src="/Logo.png"
               alt="Company Logo"
-              // object-left anchors it nicely to the left side as it scales
               className="w-full h-full object-contain object-left scale-[1.35] origin-left"
             />
           </div>
@@ -106,11 +104,11 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-2 ml-4 mr-1">
           {navLinks.map((item) => (
             <FlipLink
-              key={item}
-              href={`#${item.toLowerCase().replace(" ", "-")}`}
+              key={item.name}
+              href={item.href} // Uses the specific href defined in the array
               className="px-4 py-2"
             >
-              {item}
+              {item.name}
             </FlipLink>
           ))}
         </div>
@@ -155,12 +153,12 @@ export default function Navbar() {
           >
             {navLinks.map((item) => (
               <FlipLink
-                key={item}
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
+                key={item.name}
+                href={item.href} // Uses the specific href defined in the array
                 onClick={() => setIsOpen(false)}
                 className="px-5 py-2.5 w-fit"
               >
-                {item}
+                {item.name}
               </FlipLink>
             ))}
           </motion.div>

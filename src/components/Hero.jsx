@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
 // Reusable Flip Text component for the Button
 const FlipText = ({ children }) => {
@@ -62,9 +64,12 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative z-10 max-w-7xl mx-auto w-full px-5 md:px-12 pt-28 pb-10 md:pb-20 grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-6 items-center flex-grow">
+    <section
+      aria-label="Hero Introduction"
+      className="relative z-10 max-w-7xl mx-auto w-full px-5 md:px-12 pt-28 pb-10 md:pb-20 grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-6 items-center flex-grow"
+    >
       {/* Left Column: Text & CTA */}
-      <motion.div
+      <motion.header
         variants={textContainerVariants}
         initial="hidden"
         animate="visible"
@@ -87,22 +92,31 @@ export default function Hero() {
           unforgettable brand experiences that move people and grow businesses.
         </motion.p>
 
-        {/* CTA Button */}
-        <motion.button
-          variants={textItemVariants}
-          initial="initial"
-          whileHover="hovered"
-          whileTap={{ scale: 0.95 }}
-          className="bg-agency-yellow text-agency-green border border-agency-green rounded-full px-6 py-3 font-satoshi font-bold text-[18px] shadow-[0_4px_14px_0_rgba(252,215,24,0.39)] cursor-pointer"
-        >
-          <FlipText>Let's Collab!</FlipText>
-        </motion.button>
-      </motion.div>
+        {/* CTA Button wrapped in Link */}
+        <motion.div variants={textItemVariants}>
+          <Link
+            href="/contact"
+            aria-label="Start a collaboration with our creative agency"
+          >
+            <motion.button
+              initial="initial"
+              whileHover="hovered"
+              whileTap={{ scale: 0.95 }}
+              className="bg-agency-yellow text-agency-green border border-agency-green rounded-full px-6 py-3 font-satoshi font-bold text-[18px] shadow-[0_4px_14px_0_rgba(252,215,24,0.39)] cursor-pointer"
+            >
+              <FlipText>Let's Collab!</FlipText>
+            </motion.button>
+          </Link>
+        </motion.div>
+      </motion.header>
 
       {/* Right Column: Imagery & Graphics */}
-      <div className="relative w-full h-[320px] md:h-[600px] flex items-center justify-center mt-2 lg:mt-0">
-        {/* Back Image (Abstract) - Hover removed */}
-        <motion.div
+      <div
+        className="relative w-full h-[320px] md:h-[600px] flex items-center justify-center mt-2 lg:mt-0"
+        role="presentation"
+      >
+        {/* Back Image (Abstract) */}
+        <motion.figure
           initial={{ opacity: 0, scale: 0.8, y: 50, rotate: 0 }}
           animate={{ opacity: 0.9, scale: 1, y: 0, rotate: 12 }}
           transition={{
@@ -113,15 +127,17 @@ export default function Hero() {
           }}
           className="absolute right-0 md:right-10 top-0 md:top-12 w-[240px] md:w-[420px] h-[160px] md:h-[280px] rounded-2xl md:rounded-[2rem] overflow-hidden border-[1px] border-gray-200 shadow-xl"
         >
-          <img
-            src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop"
-            alt="Abstract light"
-            className="w-full h-full object-cover"
+          <Image
+            src="/hero2.png"
+            alt="Abstract neon light trails representing creative brand strategy and digital innovation"
+            fill
+            sizes="(max-width: 768px) 240px, 420px"
+            className="object-cover"
           />
-        </motion.div>
+        </motion.figure>
 
-        {/* Front Image (Portrait blurred motion) - Hover removed */}
-        <motion.div
+        {/* Front Image (Portrait blurred motion) - LCP Element */}
+        <motion.figure
           initial={{ opacity: 0, scale: 0.8, y: 50, rotate: 0 }}
           animate={{ opacity: 1, scale: 1, y: 0, rotate: -6 }}
           transition={{
@@ -132,12 +148,15 @@ export default function Hero() {
           }}
           className="absolute left-2 md:left-8 bottom-6 md:bottom-20 w-[260px] md:w-[480px] h-[180px] md:h-[330px] rounded-xl md:rounded-2xl overflow-hidden border-[1.5px] border-[#0066FF] shadow-2xl z-10 bg-gray-200"
         >
-          <img
-            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1287&auto=format&fit=crop"
-            alt="Motion portrait"
-            className="w-full h-full object-cover grayscale-[30%]"
+          <Image
+            src="/hero1.png"
+            alt="Dynamic motion portrait showcasing storytelling and brand experience design"
+            fill
+            sizes="(max-width: 768px) 260px, 480px"
+            priority
+            className="object-cover grayscale-[30%]"
           />
-        </motion.div>
+        </motion.figure>
       </div>
     </section>
   );

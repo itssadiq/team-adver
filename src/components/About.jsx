@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function About() {
   // Staggered animation for the left text column
@@ -26,6 +27,7 @@ export default function About() {
     // "bg-agency-green" with overflow-hidden to keep the layout tight
     <section
       id="about-us"
+      aria-labelledby="about-heading"
       className="relative w-full bg-agency-green overflow-hidden selection:bg-agency-yellow selection:text-agency-green"
     >
       {/* Subtle Noise Texture Overlay (Consistency with Hero) */}
@@ -34,6 +36,7 @@ export default function About() {
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
         }}
+        aria-hidden="true"
       />
 
       {/* Main Container - Constrained for Mobile "One Go" Fit */}
@@ -59,6 +62,7 @@ export default function About() {
                 Overriding the default dark color to light text with !text-agency-light 
                 Using not-italic because your design screenshot shows upright text */}
             <motion.h2
+              id="about-heading"
               variants={textItemVariants}
               className="heading-2 !text-agency-light not-italic max-md:text-[55px] max-md:leading-[0.95] mb-5 md:mb-6"
             >
@@ -71,11 +75,10 @@ export default function About() {
               variants={textItemVariants}
               className="body-16-medium !text-agency-light not-italic max-w-[480px] max-md:text-[15px] opacity-90"
             >
-              Damas Creative is a collective of designers, strategists, and
-              storytellers who turn bold ideas into meaningful brand
-              expressions. We partner with ambitious companies to shape
-              identities, build trust, and create visual narratives that leave a
-              lasting impression.
+              At Team Adver, we’re not just a marketing agency but your digital
+              growth partners. With a passion for creativity and a knack for
+              data-driven strategies, we bring your brand’s unique story to
+              life.
             </motion.p>
           </motion.div>
 
@@ -88,7 +91,7 @@ export default function About() {
             className="relative w-full flex justify-center items-center h-[260px] md:h-[450px]"
           >
             {/* Image Wrapper - Removed Hover as requested, rotated slightly */}
-            <motion.div
+            <motion.figure
               initial={{ rotate: 0, scale: 0.9 }}
               whileInView={{ rotate: 4, scale: 1 }}
               viewport={{ once: true }}
@@ -100,13 +103,14 @@ export default function About() {
               }}
               className="relative w-[90%] md:w-[85%] h-full rounded-2xl md:rounded-[2rem] overflow-hidden border-[1px] border-white/20 shadow-2xl z-10 bg-agency-dark"
             >
-              {/* Replace src with your actual red/orange tunnel image */}
-              <img
-                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
-                alt="Ideas crafted into impact"
-                className="w-full h-full object-cover"
+              <Image
+                src="/about.png"
+                alt="Vibrant red and orange light tunnel symbolizing Damas Creative agency turning bold ideas into impactful brand expressions"
+                fill
+                sizes="(max-width: 768px) 90vw, (max-width: 1280px) 42vw, 540px"
+                className="object-cover"
               />
-            </motion.div>
+            </motion.figure>
 
             {/* Yellow Hand-Drawn Sparks / Sunbeams */}
             <motion.div
@@ -115,6 +119,7 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ type: "spring", bounce: 0.6, delay: 0.6 }}
               className="absolute -top-6 -right-2 md:-top-10 md:-right-6 w-20 h-20 md:w-28 md:h-28 text-agency-yellow z-0"
+              aria-hidden="true"
             >
               <svg
                 viewBox="0 0 100 100"

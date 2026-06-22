@@ -59,7 +59,7 @@ export default function Services() {
     <section
       id="services"
       aria-labelledby="services-heading"
-      className="bg-agency-green px-2 md:px-5 pb-4 md:pb-5 pt-10 md:pt-20"
+      className="bg-agency-grey px-2 md:px-5 pb-4 md:pb-5 pt-10 md:pt-20"
     >
       <div className="relative bg-agency-light rounded-[2rem] md:rounded-[3rem] w-full max-w-7xl mx-auto p-6 md:p-16 overflow-hidden">
         {/* Subtle Noise Texture Overlay */}
@@ -75,7 +75,7 @@ export default function Services() {
           {/* Header Row */}
           <div className="flex flex-col md:flex-row md:justify-between md:items-end w-full">
             <header className="flex flex-col items-start">
-              <span className="font-satoshi font-bold text-agency-green text-[13px] md:text-[15px] uppercase tracking-wider mb-3">
+              <span className="font-satoshi font-bold text-agency-grey text-[13px] md:text-[15px] uppercase tracking-wider mb-3">
                 Our Services
               </span>
               <h2
@@ -95,13 +95,13 @@ export default function Services() {
                 aria-label="Start a new project with our creative agency"
                 className="flex items-center gap-2 group cursor-pointer"
               >
-                <span className="font-satoshi font-bold text-[16px] text-agency-green relative overflow-hidden">
+                <span className="font-satoshi font-bold text-[16px] text-agency-grey relative overflow-hidden">
                   {/* Subtle text underline reveal on hover */}
                   Start a Project
-                  <span className="absolute left-0 bottom-0 w-full h-[1.5px] bg-agency-green -translate-x-[101%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+                  <span className="absolute left-0 bottom-0 w-full h-[1.5px] bg-agency-grey -translate-x-[101%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
                 </span>
 
-                <div className="relative border border-agency-green rounded-md p-1.5 overflow-hidden bg-transparent transition-colors duration-300 group-hover:bg-agency-green/5">
+                <div className="relative border border-agency-grey rounded-md p-1.5 overflow-hidden bg-transparent transition-colors duration-300 group-hover:bg-agency-grey/5">
                   {/* Arrow 1 (Original - slides out top right) */}
                   <svg
                     width="16"
@@ -112,7 +112,7 @@ export default function Services() {
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-agency-green transition-transform duration-300 ease-out group-hover:translate-x-6 group-hover:-translate-y-6"
+                    className="text-agency-grey transition-transform duration-300 ease-out group-hover:translate-x-6 group-hover:-translate-y-6"
                     aria-hidden="true"
                   >
                     <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -129,7 +129,7 @@ export default function Services() {
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="absolute top-1.5 left-1.5 text-agency-green -translate-x-6 translate-y-6 transition-transform duration-300 ease-out group-hover:translate-x-0 group-hover:translate-y-0"
+                    className="absolute top-1.5 left-1.5 text-agency-grey -translate-x-6 translate-y-6 transition-transform duration-300 ease-out group-hover:translate-x-0 group-hover:translate-y-0"
                     aria-hidden="true"
                   >
                     <line x1="7" y1="17" x2="17" y2="7"></line>

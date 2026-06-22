@@ -5,8 +5,8 @@
   /* Colors */
   --color-agency-light: #fafafa;
   --color-agency-dark: #020202;
-  --color-agency-green: #063d30;
-  --color-agency-yellow: #fcd718;
+  --color-agency-grey: #101818;
+  --color-agency-blue: #ace4f8;
 
   /* Typography */
   --font-anton: var(--font-anton), sans-serif;
@@ -22,46 +22,46 @@
      HEADINGS (ANTON)
      ========================================= */
   .heading-1 {
-    @apply font-anton text-agency-green text-[105px] tracking-agency font-normal not-italic leading-none;
+    @apply font-anton text-agency-grey text-[105px] tracking-agency font-normal not-italic leading-none;
   }
 
   .heading-2 {
-    @apply font-anton text-agency-green text-[80px] tracking-agency font-normal italic leading-tight;
+    @apply font-anton text-agency-grey text-[80px] tracking-agency font-normal italic leading-tight;
   }
 
   .heading-3 {
-    @apply font-anton text-agency-green text-[46px] tracking-agency font-normal italic leading-tight;
+    @apply font-anton text-agency-grey text-[46px] tracking-agency font-normal italic leading-tight;
   }
 
   .heading-4 {
-    @apply font-anton text-agency-green text-[38px] tracking-agency font-normal not-italic leading-tight;
+    @apply font-anton text-agency-grey text-[38px] tracking-agency font-normal not-italic leading-tight;
   }
 
   .heading-5 {
-    @apply font-anton text-agency-green text-[36px] tracking-agency font-normal not-italic leading-tight;
+    @apply font-anton text-agency-grey text-[36px] tracking-agency font-normal not-italic leading-tight;
   }
 
   .heading-6 {
-    @apply font-anton text-agency-green text-[34px] tracking-agency font-normal not-italic leading-tight;
+    @apply font-anton text-agency-grey text-[34px] tracking-agency font-normal not-italic leading-tight;
   }
 
   /* =========================================
      BODY TEXT (SATOSHI)
      ========================================= */
   .body-24 {
-    @apply font-satoshi text-agency-green text-[24px] tracking-agency font-medium italic leading-normal;
+    @apply font-satoshi text-agency-grey text-[24px] tracking-agency font-medium italic leading-normal;
   }
 
   .body-18-bold {
-    @apply font-satoshi text-agency-green text-[18px] tracking-agency font-bold italic leading-normal;
+    @apply font-satoshi text-agency-grey text-[18px] tracking-agency font-bold italic leading-normal;
   }
 
   .body-18-medium {
-    @apply font-satoshi text-agency-green text-[18px] tracking-agency font-medium italic leading-normal;
+    @apply font-satoshi text-agency-grey text-[18px] tracking-agency font-medium italic leading-normal;
   }
 
   .body-16-bold {
-    @apply font-satoshi text-agency-green text-[16px] tracking-agency font-bold italic leading-normal;
+    @apply font-satoshi text-agency-grey text-[16px] tracking-agency font-bold italic leading-normal;
   }
 
   .body-16-medium {

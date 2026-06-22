@@ -52,7 +52,7 @@ const FaqItem = ({ faq, isOpen, onClick }) => {
           transition={{ duration: 0.25, ease: "easeInOut" }}
           className={`shrink-0 flex items-center justify-center w-7 h-7 rounded-md transition-colors duration-300 relative ${
             isOpen
-              ? "bg-agency-yellow text-agency-dark"
+              ? "bg-agency-blue text-agency-dark"
               : "border border-white/20 text-agency-light"
           }`}
         >
@@ -93,7 +93,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="relative bg-agency-green w-full px-5 md:px-12 py-20 md:py-32 overflow-hidden selection:bg-agency-yellow selection:text-agency-green"
+      className="relative bg-agency-grey w-full px-5 md:px-12 py-20 md:py-32 overflow-hidden selection:bg-agency-blue selection:text-agency-grey"
     >
       {/* 
         ANTI-LAG FIX: 
@@ -117,7 +117,7 @@ export default function FAQ() {
             viewport={{ once: true, amount: 0.3 }}
             className="flex flex-col items-start"
           >
-            <span className="font-satoshi font-bold text-agency-yellow text-[13px] md:text-[14px] uppercase tracking-wider mb-3">
+            <span className="font-satoshi font-bold text-agency-blue text-[13px] md:text-[14px] uppercase tracking-wider mb-3">
               FAQs
             </span>
             <h2 className="heading-2 !text-agency-light not-italic max-md:text-[55px] max-md:leading-[0.95]">

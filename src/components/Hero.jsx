@@ -102,7 +102,7 @@ export default function Hero() {
               initial="initial"
               whileHover="hovered"
               whileTap={{ scale: 0.95 }}
-              className="bg-agency-yellow text-agency-green border border-agency-green rounded-full px-6 py-3 font-satoshi font-bold text-[18px] shadow-[0_4px_14px_0_rgba(252,215,24,0.39)] cursor-pointer"
+              className="bg-agency-blue text-agency-grey border border-agency-grey rounded-full px-6 py-3 font-satoshi font-bold text-[18px] shadow-lg shadow-agency-blue/40 cursor-pointer"
             >
               <FlipText>Let's Collab!</FlipText>
             </motion.button>
@@ -125,7 +125,7 @@ export default function Hero() {
             bounce: 0.4,
             delay: 0.2,
           }}
-          className="absolute right-0 md:right-10 top-0 md:top-12 w-[240px] md:w-[420px] h-[160px] md:h-[280px] rounded-2xl md:rounded-[2rem] overflow-hidden border-[1px] border-gray-200 shadow-xl"
+          className="absolute right-0 md:right-10 top-0 md:top-12 w-[240px] md:w-[420px] h-[160px] md:h-[280px] rounded-2xl md:rounded-[2rem] overflow-hidden border border-agency-grey/10 shadow-xl"
         >
           <Image
             src="/hero2.png"
@@ -146,7 +146,7 @@ export default function Hero() {
             bounce: 0.4,
             delay: 0.4,
           }}
-          className="absolute left-2 md:left-8 bottom-6 md:bottom-20 w-[260px] md:w-[480px] h-[180px] md:h-[330px] rounded-xl md:rounded-2xl overflow-hidden border-[1.5px] border-[#0066FF] shadow-2xl z-10 bg-gray-200"
+          className="absolute left-2 md:left-8 bottom-6 md:bottom-20 w-[260px] md:w-[480px] h-[180px] md:h-[330px] rounded-xl md:rounded-2xl overflow-hidden border-[1.5px] border-agency-blue shadow-2xl z-10 bg-agency-grey/10"
         >
           <Image
             src="/hero1.png"

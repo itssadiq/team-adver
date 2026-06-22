@@ -16,7 +16,7 @@ const FlipLink = ({ children, href, onClick, className }) => {
           initial: { backgroundColor: "#FAFAFA" },
           hovered: { backgroundColor: "#e5e5e5" },
         }}
-        className={`relative overflow-hidden text-agency-green rounded-full font-satoshi font-medium text-[15px] cursor-pointer ${className}`}
+        className={`relative overflow-hidden text-agency-grey rounded-full font-satoshi font-medium text-[15px] cursor-pointer ${className}`}
       >
         <div className="relative flex items-center justify-center">
           <div className="flex">
@@ -87,7 +87,7 @@ export default function Navbar() {
       }}
     >
       {/* Main Navbar */}
-      <nav className="bg-agency-green rounded-full px-2 flex items-center justify-between w-[80%] md:w-fit shadow-lg transition-all duration-300">
+      <nav className="bg-agency-grey rounded-full px-2 flex items-center justify-between w-[80%] md:w-fit shadow-lg transition-all duration-300">
         {/* --- CUSTOM LOGO SECTION --- */}
         <Link href="/" className="ml-2 md:ml-3 shrink-0 flex items-center">
           <div className="relative w-32 h-20 flex items-center">
@@ -145,7 +145,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden mt-3 w-[70%] bg-agency-green rounded-[1.5rem] p-5 flex flex-col items-start gap-3 shadow-xl origin-top"
+            className="md:hidden mt-3 w-[70%] bg-agency-grey rounded-[1.5rem] p-5 flex flex-col items-start gap-3 shadow-xl origin-top"
             initial={{ opacity: 0, y: -15, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}

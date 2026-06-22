@@ -24,11 +24,11 @@ export default function About() {
 
   return (
     // ID matched exactly to the Navbar href "#about-us"
-    // "bg-agency-green" with overflow-hidden to keep the layout tight
+    // "bg-agency-grey" with overflow-hidden to keep the layout tight
     <section
       id="about-us"
       aria-labelledby="about-heading"
-      className="relative w-full bg-agency-green overflow-hidden selection:bg-agency-yellow selection:text-agency-green"
+      className="relative w-full bg-agency-grey overflow-hidden selection:bg-agency-blue selection:text-agency-grey"
     >
       {/* Subtle Noise Texture Overlay (Consistency with Hero) */}
       <div
@@ -50,10 +50,10 @@ export default function About() {
             viewport={{ once: true, amount: 0.3 }} // Triggers when 30% of the section is visible
             className="flex flex-col items-start mt-8 md:mt-0"
           >
-            {/* Small Yellow Subheading */}
+            {/* Small Blue Subheading */}
             <motion.span
               variants={textItemVariants}
-              className="font-satoshi font-bold text-agency-yellow text-[14px] md:text-[16px] uppercase tracking-wider mb-3"
+              className="font-satoshi font-bold text-agency-blue text-[14px] md:text-[16px] uppercase tracking-wider mb-3"
             >
               About Us
             </motion.span>
@@ -82,7 +82,7 @@ export default function About() {
             </motion.p>
           </motion.div>
 
-          {/* Right Column: Imagery & Yellow Sparks */}
+          {/* Right Column: Imagery & Blue Sparks */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -112,13 +112,13 @@ export default function About() {
               />
             </motion.figure>
 
-            {/* Yellow Hand-Drawn Sparks / Sunbeams */}
+            {/* Blue Hand-Drawn Sparks / Sunbeams */}
             <motion.div
               initial={{ opacity: 0, scale: 0, rotate: -20 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ type: "spring", bounce: 0.6, delay: 0.6 }}
-              className="absolute -top-6 -right-2 md:-top-10 md:-right-6 w-20 h-20 md:w-28 md:h-28 text-agency-yellow z-0"
+              className="absolute -top-6 -right-2 md:-top-10 md:-right-6 w-20 h-20 md:w-28 md:h-28 text-agency-blue z-0"
               aria-hidden="true"
             >
               <svg

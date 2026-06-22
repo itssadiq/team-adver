@@ -17,17 +17,17 @@ const ProjectLinkLight = ({ text, className }) => (
     href="#project"
     className={`flex items-center gap-2 group cursor-pointer w-fit ${className}`}
   >
-    <span className="font-satoshi font-bold text-[14px] md:text-[15px] !text-agency-green relative overflow-hidden">
+    <span className="font-satoshi font-bold text-[14px] md:text-[15px] !text-agency-grey relative overflow-hidden">
       {text}
-      <span className="absolute left-0 bottom-0 w-full h-[1.5px] bg-agency-green -translate-x-[101%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+      <span className="absolute left-0 bottom-0 w-full h-[1.5px] bg-agency-grey -translate-x-[101%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
     </span>
-    <div className="relative border border-agency-green/30 rounded-md p-1.5 overflow-hidden transition-colors duration-300 group-hover:border-agency-green group-hover:bg-agency-green/10">
+    <div className="relative border border-agency-grey/30 rounded-md p-1.5 overflow-hidden transition-colors duration-300 group-hover:border-agency-grey group-hover:bg-agency-grey/10">
       <svg
         width="14"
         height="14"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#063d30"
+        stroke="#101818"
         strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -41,7 +41,7 @@ const ProjectLinkLight = ({ text, className }) => (
         height="14"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#063d30"
+        stroke="#101818"
         strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -86,10 +86,10 @@ const ProjectCardLight = ({ project }) => {
           className={`flex flex-col ${isRightAligned ? "md:items-end" : "md:items-start"} mb-4 md:mb-0`}
         >
           <div
-            className={`flex items-center gap-2 font-satoshi font-bold text-[11px] md:text-[12px] text-agency-green/70 tracking-widest uppercase mb-3 md:mb-4 ${isRightAligned ? "md:flex-row-reverse" : ""}`}
+            className={`flex items-center gap-2 font-satoshi font-bold text-[11px] md:text-[12px] text-agency-grey/70 tracking-widest uppercase mb-3 md:mb-4 ${isRightAligned ? "md:flex-row-reverse" : ""}`}
           >
             <span>{project.date}</span>
-            <span className="text-agency-yellow text-[16px] leading-none">
+            <span className="text-agency-blue text-[16px] leading-none">
               •
             </span>
             <span>{project.category}</span>
@@ -103,7 +103,7 @@ const ProjectCardLight = ({ project }) => {
           className={`flex flex-col ${isRightAligned ? "md:items-end" : "md:items-start"}`}
         >
           <p
-            className={`font-satoshi text-[16px] font-medium text-agency-green/80 max-w-[340px] mb-8 md:mb-6 ${isRightAligned ? "md:ml-auto" : ""}`}
+            className={`font-satoshi text-[16px] font-medium text-agency-grey/80 max-w-[340px] mb-8 md:mb-6 ${isRightAligned ? "md:ml-auto" : ""}`}
           >
             {project.desc}
           </p>
@@ -159,7 +159,7 @@ export default function WorksPage() {
     <>
       <Navbar />
 
-      <main className="relative bg-agency-light min-h-screen w-full px-5 md:px-12 pt-32 pb-20 md:pb-32 overflow-hidden selection:bg-agency-yellow selection:text-agency-green">
+      <main className="relative bg-agency-light min-h-screen w-full px-5 md:px-12 pt-32 pb-20 md:pb-32 overflow-hidden selection:bg-agency-blue selection:text-agency-grey">
         {/* Subtle Noise Overlay */}
         <div
           className="absolute inset-0 z-0 opacity-[0.04] pointer-events-none"
@@ -179,7 +179,7 @@ export default function WorksPage() {
             <h1 className="heading-1 not-italic uppercase mb-4 max-md:text-[60px] max-md:leading-[0.9]">
               Our Work.
             </h1>
-            <p className="font-satoshi text-agency-green text-[18px] md:text-[20px] font-medium leading-[1.4] max-w-[500px]">
+            <p className="font-satoshi text-agency-grey text-[18px] md:text-[20px] font-medium leading-[1.4] max-w-[500px]">
               A collection of our finest brand identities, digital experiences,
               and creative strategies built for modern businesses.
             </p>

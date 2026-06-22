@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
 import { worksData } from "../app/data/worksData"; // <-- Adjust path as needed
 
 // Reusable Flip Text component for the Discover More button
@@ -88,16 +87,6 @@ const ProjectLink = ({ text, className }) => (
 
 const ProjectCard = ({ project }) => {
   const isRightAligned = project.align === "right";
-  const [mainImg, setMainImg] = useState(project.mainImg);
-  const [thumbs, setThumbs] = useState([project.thumb1, project.thumb2]);
-
-  const handleSwap = (index) => {
-    const clickedThumb = thumbs[index];
-    setMainImg(clickedThumb);
-    const newThumbs = [...thumbs];
-    newThumbs[index] = mainImg;
-    setThumbs(newThumbs);
-  };
 
   return (
     <motion.div
@@ -120,7 +109,7 @@ const ProjectCard = ({ project }) => {
             className={`flex items-center gap-2 font-satoshi font-bold text-[11px] md:text-[12px] text-agency-light tracking-widest uppercase mb-3 md:mb-4 ${isRightAligned ? "md:flex-row-reverse" : ""}`}
           >
             <span>{project.date}</span>
-            <span className="text-agency-yellow text-[16px] leading-none">
+            <span className="text-agency-blue text-[16px] leading-none">
               •
             </span>
             <span>{project.category}</span>
@@ -141,34 +130,17 @@ const ProjectCard = ({ project }) => {
         </div>
       </div>
 
-      {/* IMAGE & THUMBNAILS COLUMN */}
+      {/* IMAGE COLUMN (Thumbnails Removed) */}
       <div
         className={`relative w-full order-2 ${isRightAligned ? "md:order-1" : "md:order-2"}`}
       >
-        <div
-          className={`flex gap-3 mb-4 md:mb-0 justify-end md:absolute md:flex-col z-20 md:bottom-8 md:top-auto md:-translate-y-0 ${isRightAligned ? "md:-right-6 lg:-right-8" : "md:-left-6 lg:-left-8"}`}
-        >
-          {thumbs.map((img, i) => (
-            <div
-              key={i}
-              onClick={() => handleSwap(i)}
-              className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border border-white/20 cursor-pointer bg-black/50 transition-transform duration-300 hover:scale-105"
-            >
-              <img
-                src={img}
-                alt="Thumbnail"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
         <div className="relative w-full h-[240px] md:h-[400px] lg:h-[480px] rounded-2xl md:rounded-[2rem] overflow-hidden shadow-2xl bg-black/20 border border-white/10">
           <motion.img
-            key={mainImg}
             initial={{ opacity: 0.5, filter: "blur(5px)" }}
-            animate={{ opacity: 1, filter: "blur(0px)" }}
+            whileInView={{ opacity: 1, filter: "blur(0px)" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            src={mainImg}
+            src={project.mainImg}
             alt={project.title}
             className="w-full h-full object-cover"
           />
@@ -188,7 +160,7 @@ export default function Works() {
   return (
     <section
       id="works"
-      className="relative bg-agency-green w-full px-5 md:px-12 py-20 md:py-32 overflow-hidden selection:bg-agency-yellow selection:text-agency-green"
+      className="relative bg-agency-grey w-full px-5 md:px-12 py-20 md:py-32 overflow-hidden selection:bg-agency-blue selection:text-agency-grey"
     >
       <div
         className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
@@ -203,7 +175,7 @@ export default function Works() {
           viewport={{ once: true, amount: 0.5 }}
           className="flex flex-col items-center max-md:items-start mb-16 md:mb-28"
         >
-          <span className="font-satoshi font-bold text-agency-yellow text-[13px] md:text-[14px] uppercase tracking-wider mb-2 md:mb-3">
+          <span className="font-satoshi font-bold text-agency-blue text-[13px] md:text-[14px] uppercase tracking-wider mb-2 md:mb-3">
             Selected Works
           </span>
           <h2 className="heading-2 !text-agency-light not-italic text-center max-md:text-left max-md:text-[50px] max-md:leading-[0.95]">
@@ -230,10 +202,10 @@ export default function Works() {
               whileHover="hovered"
               whileTap={{ scale: 0.95 }}
               variants={{
-                initial: { scale: 1, backgroundColor: "#fcd718" },
-                hovered: { scale: 1.05, backgroundColor: "#e6c415" },
+                initial: { scale: 1, backgroundColor: "#ace4f8" },
+                hovered: { scale: 1.05, backgroundColor: "#8bcbe0" },
               }}
-              className="text-agency-green border border-agency-yellow rounded-full px-8 py-3.5 font-satoshi font-bold text-[16px] md:text-[18px] shadow-[0_4px_14px_0_rgba(252,215,24,0.39)] cursor-pointer"
+              className="text-agency-grey border border-agency-blue rounded-full px-8 py-3.5 font-satoshi font-bold text-[16px] md:text-[18px] shadow-[0_4px_14px_0_rgba(172,228,248,0.39)] cursor-pointer"
             >
               <FlipText>Discover More</FlipText>
             </motion.button>

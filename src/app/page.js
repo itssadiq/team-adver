@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-agency-light flex flex-col overflow-hidden selection:bg-agency-yellow selection:text-agency-green">
+    <main className="relative min-h-screen bg-agency-light flex flex-col overflow-hidden selection:bg-agency-blue selection:text-agency-grey">
       {/* Subtle Noise Texture Overlay */}
       <div
         className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"

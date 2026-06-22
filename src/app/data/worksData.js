@@ -3,12 +3,11 @@
 export const worksData = [
   {
     id: 1,
-    date: "Jun 2024",
-    category: "PACKAGING",
-    title: "Velocity Motors",
-    desc: "A high-performance brand crafted for a new era of electric sports cars, fast and emotionally charged.",
-    mainImg:
-      "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?q=80&w=2000&auto=format&fit=crop",
+    date: "Feb 2026",
+    category: "Web Development",
+    title: "Transdata Solutions",
+    desc: "Crafted a ustom website for Transdata Solutions a UAE based IT services provider. Highlighting their services and enhanced user experience with consistent brand authority.",
+    mainImg: "/projects/Transdata-site.png",
     thumb1:
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=400&auto=format&fit=crop",
     thumb2:

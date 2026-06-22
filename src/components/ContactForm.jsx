@@ -49,7 +49,7 @@ const CheckCircleIcon = () => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="w-[22px] h-[22px] text-agency-yellow"
+    className="w-[22px] h-[22px] text-agency-blue"
   >
     <circle cx="12" cy="12" r="11" stroke="currentColor" strokeWidth="2" />
     <path
@@ -87,7 +87,7 @@ export default function ContactForm() {
 
   return (
     // We use min-h-screen and pt-32 to account for your navbar height
-    <main className="relative min-h-screen bg-agency-light pt-28 md:pt-40 pb-20 px-5 md:px-12 selection:bg-agency-yellow selection:text-agency-green overflow-hidden">
+    <main className="relative min-h-screen bg-agency-light pt-28 md:pt-40 pb-20 px-5 md:px-12 selection:bg-agency-blue selection:text-agency-grey overflow-hidden">
       {/* Subtle Noise Texture Overlay */}
       <div
         className="absolute inset-0 z-0 opacity-[0.04] pointer-events-none"
@@ -117,7 +117,7 @@ export default function ContactForm() {
 
           <motion.p
             variants={itemVariants}
-            className="font-satoshi text-agency-green text-[18px] md:text-[20px] font-medium leading-[1.4] max-w-[420px]"
+            className="font-satoshi text-agency-grey text-[18px] md:text-[20px] font-medium leading-[1.4] max-w-[420px]"
           >
             Have a project or need help? Fill out the form, and we'll get back
             to you soon.
@@ -134,7 +134,7 @@ export default function ContactForm() {
             damping: 24,
             delay: 0.2,
           }}
-          className="w-full bg-agency-green rounded-[2rem] p-8 md:p-12 shadow-2xl"
+          className="w-full bg-agency-grey rounded-[2rem] p-8 md:p-12 shadow-2xl"
         >
           <form
             className="flex flex-col gap-6 w-full"
@@ -152,7 +152,7 @@ export default function ContactForm() {
                 type="text"
                 id="name"
                 placeholder="Enter your name"
-                className="w-full bg-black/15 border border-white/20 rounded-xl px-4 py-3.5 font-satoshi text-agency-light placeholder:text-agency-light/40 focus:outline-none focus:border-agency-yellow transition-colors duration-300"
+                className="w-full bg-black/15 border border-white/20 rounded-xl px-4 py-3.5 font-satoshi text-agency-light placeholder:text-agency-light/40 focus:outline-none focus:border-agency-blue transition-colors duration-300"
               />
             </div>
 
@@ -168,7 +168,7 @@ export default function ContactForm() {
                 type="email"
                 id="email"
                 placeholder="Enter your email"
-                className="w-full bg-black/15 border border-white/20 rounded-xl px-4 py-3.5 font-satoshi text-agency-light placeholder:text-agency-light/40 focus:outline-none focus:border-agency-yellow transition-colors duration-300"
+                className="w-full bg-black/15 border border-white/20 rounded-xl px-4 py-3.5 font-satoshi text-agency-light placeholder:text-agency-light/40 focus:outline-none focus:border-agency-blue transition-colors duration-300"
               />
             </div>
 
@@ -210,7 +210,7 @@ export default function ContactForm() {
               <textarea
                 id="project"
                 placeholder="Tell us about your project"
-                className="w-full h-[140px] md:h-[160px] resize-none bg-black/15 border border-white/20 rounded-xl px-4 py-3.5 font-satoshi text-agency-light placeholder:text-agency-light/40 focus:outline-none focus:border-agency-yellow transition-colors duration-300"
+                className="w-full h-[140px] md:h-[160px] resize-none bg-black/15 border border-white/20 rounded-xl px-4 py-3.5 font-satoshi text-agency-light placeholder:text-agency-light/40 focus:outline-none focus:border-agency-blue transition-colors duration-300"
               />
             </div>
 
@@ -222,9 +222,9 @@ export default function ContactForm() {
               whileTap={{ scale: 0.98 }}
               // Combined variants to handle both the button scaling and the child FlipText animation
               variants={{
-                initial: { scale: 1, backgroundColor: "#fcd718" },
+                initial: { scale: 1, backgroundColor: "#ace4f8" },
               }}
-              className="w-full text-agency-green font-satoshi font-bold text-[17px] md:text-[18px] py-4 rounded-full mt-4 cursor-pointer shadow-[0_4px_14px_0_rgba(252,215,24,0.2)]"
+              className="w-full text-agency-grey font-satoshi font-bold text-[17px] md:text-[18px] py-4 rounded-full mt-4 cursor-pointer shadow-[0_4px_14px_0_rgba(172,228,248,0.2)]"
             >
               <FlipText>Submit</FlipText>
             </motion.button>

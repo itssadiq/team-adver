@@ -10,7 +10,7 @@ const FlipIcon = ({ children, href }) => {
       href={href}
       initial="initial"
       whileHover="hovered"
-      className="relative overflow-hidden flex items-center justify-center p-1 text-agency-green/70 hover:text-agency-green transition-colors cursor-pointer"
+      className="relative overflow-hidden flex items-center justify-center p-1 text-agency-grey/70 hover:text-agency-grey transition-colors cursor-pointer"
     >
       <motion.div
         variants={{ initial: { y: 0 }, hovered: { y: "-150%" } }}
@@ -31,7 +31,7 @@ const FlipIcon = ({ children, href }) => {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-agency-light w-full pt-20 md:pt-32 pb-8 px-5 md:px-12 overflow-hidden selection:bg-agency-yellow selection:text-agency-green">
+    <footer className="relative bg-agency-light w-full pt-20 md:pt-32 pb-8 px-5 md:px-12 overflow-hidden selection:bg-agency-blue selection:text-agency-grey">
       {/* Subtle Noise Texture Overlay */}
       <div
         className="absolute inset-0 z-0 opacity-[0.04] pointer-events-none"
@@ -50,7 +50,7 @@ export default function Footer() {
             viewport={{ once: true, amount: 0.3 }}
             className="flex flex-col"
           >
-            <h2 className="font-anton text-[65px] sm:text-[90px] md:text-[110px] leading-[0.9] uppercase tracking-[-0.02em] text-agency-green">
+            <h2 className="font-anton text-[65px] sm:text-[90px] md:text-[110px] leading-[0.9] uppercase tracking-[-0.02em] text-agency-grey">
               Let's Create
               <br />
               <div className="flex items-center gap-3 md:gap-5 mt-2 md:mt-0">
@@ -58,7 +58,7 @@ export default function Footer() {
                 {/* Premium Arrow Button */}
                 <Link
                   href="#contact"
-                  className="relative flex items-center justify-center w-10 h-10 md:w-14 md:h-14 border-[1.5px] border-agency-green/30 rounded-lg overflow-hidden group hover:border-agency-green hover:bg-agency-green/10 transition-all duration-300 -mt-1 md:-mt-3"
+                  className="relative flex items-center justify-center w-10 h-10 md:w-14 md:h-14 border-[1.5px] border-agency-grey/30 rounded-lg overflow-hidden group hover:border-agency-grey hover:bg-agency-grey/10 transition-all duration-300 -mt-1 md:-mt-3"
                 >
                   <svg
                     width="20"
@@ -69,7 +69,7 @@ export default function Footer() {
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-agency-green transition-transform duration-300 ease-out group-hover:translate-x-8 group-hover:-translate-y-8"
+                    className="text-agency-grey transition-transform duration-300 ease-out group-hover:translate-x-8 group-hover:-translate-y-8"
                   >
                     <line x1="7" y1="17" x2="17" y2="7"></line>
                     <polyline points="7 7 17 7 17 17"></polyline>
@@ -83,7 +83,7 @@ export default function Footer() {
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="absolute text-agency-green -translate-x-8 translate-y-8 transition-transform duration-300 ease-out group-hover:translate-x-0 group-hover:translate-y-0"
+                    className="absolute text-agency-grey -translate-x-8 translate-y-8 transition-transform duration-300 ease-out group-hover:translate-x-0 group-hover:translate-y-0"
                   >
                     <line x1="7" y1="17" x2="17" y2="7"></line>
                     <polyline points="7 7 17 7 17 17"></polyline>
@@ -119,10 +119,10 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row gap-10 md:gap-32">
             {/* Visit Us */}
             <div className="flex flex-col">
-              <span className="font-satoshi font-bold text-[16px] md:text-[18px] text-agency-green mb-3 md:mb-4">
+              <span className="font-satoshi font-bold text-[16px] md:text-[18px] text-agency-grey mb-3 md:mb-4">
                 Visit Us
               </span>
-              <p className="font-satoshi text-[15px] md:text-[16px] text-agency-green/80 font-medium max-w-[220px] leading-relaxed">
+              <p className="font-satoshi text-[15px] md:text-[16px] text-agency-grey/80 font-medium max-w-[220px] leading-relaxed">
                 7814 Harrison Blvd. Wilmington,
                 <br />
                 19804 United States
@@ -131,27 +131,27 @@ export default function Footer() {
 
             {/* Contact Us */}
             <div className="flex flex-col">
-              <span className="font-satoshi font-bold text-[16px] md:text-[18px] text-agency-green mb-3 md:mb-4">
+              <span className="font-satoshi font-bold text-[16px] md:text-[18px] text-agency-grey mb-3 md:mb-4">
                 Contact Us
               </span>
               {/* Sliding Underline Email */}
               <a
                 href="mailto:hello@framer.com"
-                className="group w-fit font-satoshi text-[15px] md:text-[16px] text-agency-green/80 font-medium hover:text-agency-green transition-colors mb-2"
+                className="group w-fit font-satoshi text-[15px] md:text-[16px] text-agency-grey/80 font-medium hover:text-agency-grey transition-colors mb-2"
               >
                 <span className="relative overflow-hidden inline-flex pb-[2px]">
                   hello@framer.com
-                  <span className="absolute left-0 bottom-0 w-full h-[1.5px] bg-agency-green -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+                  <span className="absolute left-0 bottom-0 w-full h-[1.5px] bg-agency-grey -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
                 </span>
               </a>
               {/* Sliding Underline Phone */}
               <a
                 href="tel:+12345678910"
-                className="group w-fit font-satoshi text-[15px] md:text-[16px] text-agency-green/80 font-medium hover:text-agency-green transition-colors"
+                className="group w-fit font-satoshi text-[15px] md:text-[16px] text-agency-grey/80 font-medium hover:text-agency-grey transition-colors"
               >
                 <span className="relative overflow-hidden inline-flex pb-[2px]">
                   +1 (234) 567-8910
-                  <span className="absolute left-0 bottom-0 w-full h-[1.5px] bg-agency-green -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+                  <span className="absolute left-0 bottom-0 w-full h-[1.5px] bg-agency-grey -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
                 </span>
               </a>
             </div>
@@ -224,44 +224,44 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="w-full h-[1px] bg-agency-green/20 my-8 md:my-10" />
+        <div className="w-full h-[1px] bg-agency-grey/20 my-8 md:my-10" />
 
         {/* BOTTOM SECTION: Copyright & Links */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-0">
           {/* Copyright */}
-          <div className="order-2 md:order-1 font-satoshi font-medium text-[13px] md:text-[14px] text-agency-green/80 tracking-wide">
+          <div className="order-2 md:order-1 font-satoshi font-medium text-[13px] md:text-[14px] text-agency-grey/80 tracking-wide">
             © 2025 Templyo - All right reserved
           </div>
 
           {/* Policies with Sliding Underline */}
-          <div className="order-1 md:order-2 flex flex-col md:flex-row items-start md:items-center gap-4 font-satoshi font-medium text-[13px] md:text-[14px] text-agency-green/80">
+          <div className="order-1 md:order-2 flex flex-col md:flex-row items-start md:items-center gap-4 font-satoshi font-medium text-[13px] md:text-[14px] text-agency-grey/80">
             <Link
               href="#"
-              className="group hover:text-agency-green transition-colors"
+              className="group hover:text-agency-grey transition-colors"
             >
               <span className="relative overflow-hidden inline-flex pb-[2px]">
                 Terms & Conditions
-                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-agency-green -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-agency-grey -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
               </span>
             </Link>
-            <span className="hidden md:inline text-agency-green/40">•</span>
+            <span className="hidden md:inline text-agency-grey/40">•</span>
             <Link
               href="#"
-              className="group hover:text-agency-green transition-colors"
+              className="group hover:text-agency-grey transition-colors"
             >
               <span className="relative overflow-hidden inline-flex pb-[2px]">
                 Privacy Policy
-                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-agency-green -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-agency-grey -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
               </span>
             </Link>
-            <span className="hidden md:inline text-agency-green/40">•</span>
+            <span className="hidden md:inline text-agency-grey/40">•</span>
             <Link
               href="#"
-              className="group hover:text-agency-green transition-colors"
+              className="group hover:text-agency-grey transition-colors"
             >
               <span className="relative overflow-hidden inline-flex pb-[2px]">
                 Refund Policy
-                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-agency-green -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-agency-grey -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
               </span>
             </Link>
           </div>

@@ -35,27 +35,27 @@ const reviewsData = [
 // Clean Image-Only Logo Data
 const clientLogos = [
   {
-    src: "/3rd-beat.png",
+    src: "/clients/3rd-beat.png",
     alt: "3rd Beat Logo",
   },
   {
-    src: "/transdata.png",
+    src: "/clients/transdata.png",
     alt: "Transdata logo",
   },
   {
-    src: "/ukmc.png",
+    src: "/clients/ukmc.png",
     alt: "UKMC Logo",
   },
   {
-    src: "/Bigbaat-logo.png",
+    src: "/clients/Bigbaat-logo.png",
     alt: "Bigbaat Logo",
   },
   {
-    src: "/Unibridge.png",
+    src: "/clients/Unibridge.png",
     alt: "StitchnStyle Logo",
   },
   {
-    src: "/Rofam.png",
+    src: "/clients/Rofam.png",
     alt: "Rofam Logo",
   },
 ];
@@ -74,7 +74,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="bg-agency-green px-2 md:px-5 pb-10 md:pb-20 pt-10 md:pt-20"
+      className="bg-agency-grey px-2 md:px-5 pb-10 md:pb-20 pt-10 md:pt-20"
     >
       <div className="relative bg-agency-light rounded-[2rem] md:rounded-[3rem] w-full max-w-7xl mx-auto p-6 md:p-16 lg:p-20 overflow-hidden">
         {/* Subtle Noise Texture Overlay */}
@@ -88,7 +88,7 @@ export default function Testimonials() {
         <div className="relative z-10 w-full">
           {/* Header Row */}
           <div className="flex flex-col items-start md:items-center w-full mb-12 md:mb-20">
-            <span className="font-satoshi font-bold text-agency-green text-[12px] md:text-[14px] uppercase tracking-wider mb-2 md:mb-3">
+            <span className="font-satoshi font-bold text-agency-grey text-[12px] md:text-[14px] uppercase tracking-wider mb-2 md:mb-3">
               Testimonials
             </span>
             <h2 className="heading-2 not-italic text-left md:text-center max-md:text-[45px] max-md:leading-[1]">
@@ -109,15 +109,15 @@ export default function Testimonials() {
                     transition={{ duration: 0.3, ease: "easeOut" }}
                     className="flex flex-col items-start gap-6 md:gap-8"
                   >
-                    <p className="font-satoshi text-[18px] md:text-[22px] font-medium leading-[1.5] text-agency-green max-w-[500px]">
+                    <p className="font-satoshi text-[18px] md:text-[22px] font-medium leading-[1.5] text-agency-grey max-w-[500px]">
                       {reviewsData[currentIndex].quote}
                     </p>
 
                     <div className="flex flex-col items-start">
-                      <span className="font-satoshi font-bold text-[16px] md:text-[18px] text-agency-green">
+                      <span className="font-satoshi font-bold text-[16px] md:text-[18px] text-agency-grey">
                         {reviewsData[currentIndex].name}
                       </span>
-                      <span className="font-satoshi font-medium text-[14px] md:text-[15px] text-agency-green/70 mt-0.5">
+                      <span className="font-satoshi font-medium text-[14px] md:text-[15px] text-agency-grey/70 mt-0.5">
                         {reviewsData[currentIndex].role} —{" "}
                         {reviewsData[currentIndex].company}
                       </span>
@@ -132,12 +132,12 @@ export default function Testimonials() {
                   href="#contact"
                   className="flex items-center gap-2 group cursor-pointer w-fit"
                 >
-                  <span className="font-satoshi font-bold text-[14px] md:text-[15px] text-agency-green relative overflow-hidden">
+                  <span className="font-satoshi font-bold text-[14px] md:text-[15px] text-agency-grey relative overflow-hidden">
                     Start a Project
-                    <span className="absolute left-0 bottom-0 w-full h-[1.5px] bg-agency-green -translate-x-[101%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+                    <span className="absolute left-0 bottom-0 w-full h-[1.5px] bg-agency-grey -translate-x-[101%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
                   </span>
 
-                  <div className="relative border border-agency-green/40 rounded-md p-1.5 overflow-hidden transition-colors duration-300 group-hover:border-agency-green group-hover:bg-agency-green/10">
+                  <div className="relative border border-agency-grey/40 rounded-md p-1.5 overflow-hidden transition-colors duration-300 group-hover:border-agency-grey group-hover:bg-agency-grey/10">
                     <svg
                       width="14"
                       height="14"
@@ -147,7 +147,7 @@ export default function Testimonials() {
                       strokeWidth="2.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="text-agency-green transition-transform duration-300 ease-out group-hover:translate-x-6 group-hover:-translate-y-6"
+                      className="text-agency-grey transition-transform duration-300 ease-out group-hover:translate-x-6 group-hover:-translate-y-6"
                     >
                       <line x1="7" y1="17" x2="17" y2="7"></line>
                       <polyline points="7 7 17 7 17 17"></polyline>
@@ -161,7 +161,7 @@ export default function Testimonials() {
                       strokeWidth="2.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="absolute top-1.5 left-1.5 text-agency-green -translate-x-6 translate-y-6 transition-transform duration-300 ease-out group-hover:translate-x-0 group-hover:translate-y-0"
+                      className="absolute top-1.5 left-1.5 text-agency-grey -translate-x-6 translate-y-6 transition-transform duration-300 ease-out group-hover:translate-x-0 group-hover:translate-y-0"
                     >
                       <line x1="7" y1="17" x2="17" y2="7"></line>
                       <polyline points="7 7 17 7 17 17"></polyline>
@@ -169,12 +169,12 @@ export default function Testimonials() {
                   </div>
                 </Link>
 
-                <div className="w-[1px] h-6 bg-agency-green/20 hidden md:block"></div>
+                <div className="w-[1px] h-6 bg-agency-grey/20 hidden md:block"></div>
 
                 <div className="flex items-center gap-2">
                   <button
                     onClick={handlePrev}
-                    className="p-1.5 rounded-md border border-agency-green/40 hover:bg-agency-green/10 transition-colors cursor-pointer group"
+                    className="p-1.5 rounded-md border border-agency-grey/40 hover:bg-agency-grey/10 transition-colors cursor-pointer group"
                   >
                     <svg
                       width="16"
@@ -185,14 +185,14 @@ export default function Testimonials() {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="text-agency-green group-hover:-translate-x-0.5 transition-transform"
+                      className="text-agency-grey group-hover:-translate-x-0.5 transition-transform"
                     >
                       <path d="M15 18l-6-6 6-6" />
                     </svg>
                   </button>
                   <button
                     onClick={handleNext}
-                    className="p-1.5 rounded-md border border-agency-green/40 hover:bg-agency-green/10 transition-colors cursor-pointer group"
+                    className="p-1.5 rounded-md border border-agency-grey/40 hover:bg-agency-grey/10 transition-colors cursor-pointer group"
                   >
                     <svg
                       width="16"
@@ -203,7 +203,7 @@ export default function Testimonials() {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="text-agency-green group-hover:translate-x-0.5 transition-transform"
+                      className="text-agency-grey group-hover:translate-x-0.5 transition-transform"
                     >
                       <path d="M9 18l6-6-6-6" />
                     </svg>

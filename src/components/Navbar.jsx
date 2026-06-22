@@ -14,8 +14,7 @@ const FlipLink = ({ children, href, onClick, className }) => {
         whileHover="hovered"
         // Subtle background color shift on hover
         variants={{
-          initial: { backgroundColor: "#FAFAFA" },
-          hovered: { backgroundColor: "#e5e5e5" },
+          initial: { backgroundColor: "var(--color-agency-blue)" }
         }}
         className={`relative overflow-hidden text-agency-grey rounded-full font-satoshi font-medium text-[15px] cursor-pointer ${className}`}
       >

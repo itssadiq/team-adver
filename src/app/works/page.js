@@ -136,13 +136,6 @@ export default function WorksPage() {
       <Navbar />
 
       <main className="relative bg-agency-light min-h-screen w-full px-5 md:px-12 pt-32 pb-20 md:pb-32 overflow-hidden selection:bg-agency-blue selection:text-agency-grey">
-        {/* Subtle Noise Overlay */}
-        <div
-          className="absolute inset-0 z-0 opacity-[0.04] pointer-events-none"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-          }}
-        />
 
         <div className="relative z-10 max-w-7xl mx-auto w-full">
           {/* Section Header */}

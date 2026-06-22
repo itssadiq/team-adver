@@ -88,13 +88,6 @@ export default function ContactForm() {
   return (
     // We use min-h-screen and pt-32 to account for your navbar height
     <main className="relative min-h-screen bg-agency-light pt-28 md:pt-40 pb-20 px-5 md:px-12 selection:bg-agency-blue selection:text-agency-grey overflow-hidden">
-      {/* Subtle Noise Texture Overlay */}
-      <div
-        className="absolute inset-0 z-0 opacity-[0.04] pointer-events-none"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-        }}
-      />
 
       <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-24 items-start">
         {/* LEFT COLUMN: Text Content */}

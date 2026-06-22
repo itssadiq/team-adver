@@ -8,8 +8,8 @@ const anton = Anton({
 });
 
 export const metadata = {
-  title: "Agency Website",
-  description: "Built with Next.js and Tailwind CSS v4",
+  title: "Team Adver",
+  description: "Best Marketing agency in Karachi, Pakistan",
 };
 
 export default function RootLayout({ children }) {

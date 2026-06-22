@@ -2,9 +2,9 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
-// Updated data: Removed logo, added name, role, and company
 const reviewsData = [
   {
     id: 1,
@@ -32,96 +32,31 @@ const reviewsData = [
   },
 ];
 
-// SVG Placeholders for the right-side Logo Grid (Slightly enlarged since names are removed)
+// Clean Image-Only Logo Data
 const clientLogos = [
   {
-    icon: (
-      <svg
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <path d="M12 2L2 22h20L12 2z" />
-      </svg>
-    ),
+    src: "/3rd-beat.png",
+    alt: "3rd Beat Logo",
   },
   {
-    icon: (
-      <svg
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <ellipse cx="12" cy="12" rx="10" ry="4" />
-      </svg>
-    ),
+    src: "/transdata.png",
+    alt: "Transdata logo",
   },
   {
-    icon: (
-      <svg
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-      </svg>
-    ),
+    src: "/ukmc.png",
+    alt: "UKMC Logo",
   },
   {
-    icon: (
-      <svg
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-      </svg>
-    ),
+    src: "/Bigbaat-logo.png",
+    alt: "Bigbaat Logo",
   },
   {
-    icon: (
-      <svg
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-        <line x1="3" y1="9" x2="21" y2="9" />
-        <line x1="9" y1="21" x2="9" y2="9" />
-      </svg>
-    ),
+    src: "/Unibridge.png",
+    alt: "StitchnStyle Logo",
   },
   {
-    icon: (
-      <svg
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-        <path d="M12 16v-4" />
-        <path d="M12 8h.01" />
-      </svg>
-    ),
+    src: "/Rofam.png",
+    alt: "Rofam Logo",
   },
 ];
 
@@ -151,7 +86,7 @@ export default function Testimonials() {
         />
 
         <div className="relative z-10 w-full">
-          {/* Header Row (Centered on Desktop, Left on Mobile) */}
+          {/* Header Row */}
           <div className="flex flex-col items-start md:items-center w-full mb-12 md:mb-20">
             <span className="font-satoshi font-bold text-agency-green text-[12px] md:text-[14px] uppercase tracking-wider mb-2 md:mb-3">
               Testimonials
@@ -164,7 +99,6 @@ export default function Testimonials() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center w-full">
             {/* LEFT COLUMN: Quote & Navigation */}
             <div className="flex flex-col w-full h-full justify-center">
-              {/* Dynamic Quote Area */}
               <div className="min-h-[220px] md:min-h-[240px] flex flex-col justify-center">
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -179,7 +113,6 @@ export default function Testimonials() {
                       {reviewsData[currentIndex].quote}
                     </p>
 
-                    {/* Reviewer Details */}
                     <div className="flex flex-col items-start">
                       <span className="font-satoshi font-bold text-[16px] md:text-[18px] text-agency-green">
                         {reviewsData[currentIndex].name}
@@ -193,9 +126,8 @@ export default function Testimonials() {
                 </AnimatePresence>
               </div>
 
-              {/* Bottom Buttons Area: Start Project + Next/Prev Arrows */}
+              {/* Bottom Buttons Area */}
               <div className="flex flex-wrap items-center gap-6 mt-8 md:mt-10">
-                {/* Start Project Link */}
                 <Link
                   href="#contact"
                   className="flex items-center gap-2 group cursor-pointer w-fit"
@@ -237,10 +169,8 @@ export default function Testimonials() {
                   </div>
                 </Link>
 
-                {/* Vertical Separator */}
                 <div className="w-[1px] h-6 bg-agency-green/20 hidden md:block"></div>
 
-                {/* Navigation Arrows for "More Reviews" */}
                 <div className="flex items-center gap-2">
                   <button
                     onClick={handlePrev}
@@ -282,11 +212,10 @@ export default function Testimonials() {
               </div>
             </div>
 
-            {/* RIGHT COLUMN: Logos Grid (Names Removed) */}
+            {/* RIGHT COLUMN: Logos Grid */}
             <div className="relative w-full">
-              {/* Premium White Card mimicking the original image footprint */}
               <div className="w-full bg-white rounded-2xl md:rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-black/5 p-8 md:p-12 flex flex-col items-center justify-center min-h-[300px] md:min-h-[380px]">
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-6 md:gap-x-10 w-full justify-items-center">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-6 md:gap-x-20 w-full justify-items-center">
                   {clientLogos.map((client, i) => (
                     <motion.div
                       key={i}
@@ -294,9 +223,16 @@ export default function Testimonials() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.1, duration: 0.5 }}
-                      className="flex items-center justify-center opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300"
+                      className="flex items-center justify-center"
                     >
-                      <div className="text-agency-green">{client.icon}</div>
+                      <div className="relative w-[110px] h-[50px] md:w-[150px] md:h-[80px]">
+                        <Image
+                          src={client.src}
+                          alt={client.alt}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
                     </motion.div>
                   ))}
                 </div>

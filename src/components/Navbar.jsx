@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -91,10 +92,12 @@ export default function Navbar() {
         {/* --- CUSTOM LOGO SECTION --- */}
         <Link href="/" className="ml-2 md:ml-3 shrink-0 flex items-center">
           <div className="relative w-32 h-20 flex items-center">
-            <img
+            <Image
               src="/Logo.png"
               alt="Company Logo"
-              className="w-full h-full object-contain object-left scale-[1.35] origin-left"
+              fill
+              sizes="128px"
+              className="object-contain object-left scale-[1.35] origin-left"
             />
           </div>
         </Link>

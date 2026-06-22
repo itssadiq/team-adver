@@ -4,7 +4,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import Image from "next/image";
+
 
 // --- Adjust these import paths based on your folder structure ---
 import { worksData } from "../data/worksData";
@@ -57,16 +58,6 @@ const ProjectLinkLight = ({ text, className }) => (
 // 2. Adapted ProjectCard for Light Theme (Dark text, dark borders)
 const ProjectCardLight = ({ project }) => {
   const isRightAligned = project.align === "right";
-  const [mainImg, setMainImg] = useState(project.mainImg);
-  const [thumbs, setThumbs] = useState([project.thumb1, project.thumb2]);
-
-  const handleSwap = (index) => {
-    const clickedThumb = thumbs[index];
-    setMainImg(clickedThumb);
-    const newThumbs = [...thumbs];
-    newThumbs[index] = mainImg;
-    setThumbs(newThumbs);
-  };
 
   return (
     <motion.div
@@ -115,35 +106,20 @@ const ProjectCardLight = ({ project }) => {
       <div
         className={`relative w-full order-2 ${isRightAligned ? "md:order-1" : "md:order-2"}`}
       >
-        <div
-          className={`flex gap-3 mb-4 md:mb-0 justify-end md:absolute md:flex-col z-20 md:bottom-8 md:top-auto md:-translate-y-0 ${isRightAligned ? "md:-right-6 lg:-right-8" : "md:-left-6 lg:-left-8"}`}
+        <motion.div
+          initial={{ opacity: 0.5, filter: "blur(5px)" }}
+          animate={{ opacity: 1, filter: "blur(0px)" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="relative w-full h-[240px] md:h-[400px] lg:h-[480px] rounded-2xl md:rounded-[2rem] overflow-hidden shadow-xl bg-black/5 border border-black/5"
         >
-          {thumbs.map((img, i) => (
-            <div
-              key={i}
-              onClick={() => handleSwap(i)}
-              className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border border-black/10 cursor-pointer bg-white/50 transition-transform duration-300 hover:scale-105"
-            >
-              <img
-                src={img}
-                alt="Thumbnail"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
-
-        <div className="relative w-full h-[240px] md:h-[400px] lg:h-[480px] rounded-2xl md:rounded-[2rem] overflow-hidden shadow-xl bg-black/5 border border-black/5">
-          <motion.img
-            key={mainImg}
-            initial={{ opacity: 0.5, filter: "blur(5px)" }}
-            animate={{ opacity: 1, filter: "blur(0px)" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            src={mainImg}
+          <Image
+            src={project.mainImg}
             alt={project.title}
-            className="w-full h-full object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
           />
-        </div>
+        </motion.div>
 
         <div className="flex justify-end w-full mt-5 md:hidden">
           <ProjectLinkLight text="Learn More" />

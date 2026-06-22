@@ -106,7 +106,7 @@ export default function ContactForm() {
         >
           <motion.h1
             variants={itemVariants}
-            className="heading-1 not-italic mb-6"
+            className="heading-1 not-italic max-md:text-[55px] max-md:leading-[0.95] mb-6"
           >
             Let's Build
             <br />
@@ -224,7 +224,7 @@ export default function ContactForm() {
               variants={{
                 initial: { scale: 1, backgroundColor: "#ace4f8" },
               }}
-              className="w-full text-agency-grey font-satoshi font-bold text-[17px] md:text-[18px] py-4 rounded-full mt-4 cursor-pointer shadow-[0_4px_14px_0_rgba(172,228,248,0.2)]"
+              className="w-full text-agency-grey font-satoshi font-bold text-[17px] md:text-[18px] py-4 rounded-full mt-4 cursor-pointer"
             >
               <FlipText>Submit</FlipText>
             </motion.button>

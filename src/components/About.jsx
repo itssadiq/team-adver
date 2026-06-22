@@ -53,7 +53,7 @@ export default function About() {
             {/* Small Blue Subheading */}
             <motion.span
               variants={textItemVariants}
-              className="font-satoshi font-bold text-agency-blue text-[14px] md:text-[16px] uppercase tracking-wider mb-3"
+              className="font-satoshi font-bold text-agency-light text-[14px] md:text-[16px] uppercase tracking-wider mb-3"
             >
               About Us
             </motion.span>
@@ -104,7 +104,7 @@ export default function About() {
               className="relative w-[90%] md:w-[85%] h-full rounded-2xl md:rounded-[2rem] overflow-hidden border-[1px] border-white/20 shadow-2xl z-10 bg-agency-dark"
             >
               <Image
-                src="/about.png"
+                src="/about4.jpg"
                 alt="Vibrant red and orange light tunnel symbolizing Damas Creative agency turning bold ideas into impactful brand expressions"
                 fill
                 sizes="(max-width: 768px) 90vw, (max-width: 1280px) 42vw, 540px"

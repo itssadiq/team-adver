@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { worksData } from "../app/data/worksData"; // <-- Adjust path as needed
 
 // Reusable Flip Text component for the Discover More button
@@ -134,17 +135,20 @@ const ProjectCard = ({ project }) => {
       <div
         className={`relative w-full order-2 ${isRightAligned ? "md:order-1" : "md:order-2"}`}
       >
-        <div className="relative w-full h-[240px] md:h-[400px] lg:h-[480px] rounded-2xl md:rounded-[2rem] overflow-hidden shadow-2xl bg-black/20 border border-white/10">
-          <motion.img
-            initial={{ opacity: 0.5, filter: "blur(5px)" }}
-            whileInView={{ opacity: 1, filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+        <motion.div
+          initial={{ opacity: 0.5, filter: "blur(5px)" }}
+          whileInView={{ opacity: 1, filter: "blur(0px)" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="relative w-full h-[240px] md:h-[400px] lg:h-[480px] rounded-2xl md:rounded-[2rem] overflow-hidden shadow-xl bg-black/5 border border-black/5"
+        >
+          <Image
             src={project.mainImg}
             alt={project.title}
-            className="w-full h-full object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
           />
-        </div>
+        </motion.div>
         <div className="flex justify-end w-full mt-5 md:hidden">
           <ProjectLink text="Learn More" />
         </div>
@@ -175,7 +179,7 @@ export default function Works() {
           viewport={{ once: true, amount: 0.5 }}
           className="flex flex-col items-center max-md:items-start mb-16 md:mb-28"
         >
-          <span className="font-satoshi font-bold text-agency-blue text-[13px] md:text-[14px] uppercase tracking-wider mb-2 md:mb-3">
+          <span className="font-satoshi font-bold text-agency-light text-[13px] md:text-[14px] uppercase tracking-wider mb-2 md:mb-3">
             Selected Works
           </span>
           <h2 className="heading-2 !text-agency-light not-italic text-center max-md:text-left max-md:text-[50px] max-md:leading-[0.95]">
@@ -203,9 +207,8 @@ export default function Works() {
               whileTap={{ scale: 0.95 }}
               variants={{
                 initial: { scale: 1, backgroundColor: "#ace4f8" },
-                hovered: { scale: 1.05, backgroundColor: "#8bcbe0" },
               }}
-              className="text-agency-grey border border-agency-blue rounded-full px-8 py-3.5 font-satoshi font-bold text-[16px] md:text-[18px] shadow-[0_4px_14px_0_rgba(172,228,248,0.39)] cursor-pointer"
+              className="text-agency-grey border border-agency-blue rounded-full px-8 py-3.5 font-satoshi font-bold text-[16px] md:text-[18px] cursor-pointer"
             >
               <FlipText>Discover More</FlipText>
             </motion.button>

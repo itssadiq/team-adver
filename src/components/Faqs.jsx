@@ -117,7 +117,7 @@ export default function FAQ() {
             viewport={{ once: true, amount: 0.3 }}
             className="flex flex-col items-start"
           >
-            <span className="font-satoshi font-bold text-agency-blue text-[13px] md:text-[14px] uppercase tracking-wider mb-3">
+            <span className="font-satoshi font-bold text-agency-light text-[13px] md:text-[14px] uppercase tracking-wider mb-3">
               FAQs
             </span>
             <h2 className="heading-2 !text-agency-light not-italic max-md:text-[55px] max-md:leading-[0.95]">

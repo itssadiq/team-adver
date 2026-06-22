@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+import { FiInstagram, FiFacebook, FiLinkedin } from "react-icons/fi";
 
 // Custom component to apply the "FlipText" vertical slide effect to Social Icons
 const FlipIcon = ({ children, href }) => {
@@ -104,10 +106,12 @@ export default function Footer() {
             <div className="absolute inset-0 bg-[#d0d7e1] rounded-2xl md:rounded-[2rem] border border-black/5 translate-x-[-12%] translate-y-[15%]" />
             <div className="absolute inset-0 bg-[#e2e8f0]/80 rounded-2xl md:rounded-[2rem] border border-black/5 translate-x-[-6%] translate-y-[7.5%] backdrop-blur-sm" />
             <div className="absolute inset-0 rounded-2xl md:rounded-[2rem] overflow-hidden shadow-2xl border border-black/10 z-10 bg-black/10">
-              <img
-                src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=1000&auto=format&fit=crop"
+              <Image
+                src="/footer.jpg"
                 alt="Creative Collaboration"
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 440px"
+                className="object-cover"
               />
             </div>
           </motion.div>
@@ -123,9 +127,9 @@ export default function Footer() {
                 Visit Us
               </span>
               <p className="font-satoshi text-[15px] md:text-[16px] text-agency-grey/80 font-medium max-w-[220px] leading-relaxed">
-                7814 Harrison Blvd. Wilmington,
+                Office#406 Indigo Business Center Bahadurabad,
                 <br />
-                19804 United States
+                Karachi, Pakistan
               </p>
             </div>
 
@@ -136,21 +140,21 @@ export default function Footer() {
               </span>
               {/* Sliding Underline Email */}
               <a
-                href="mailto:hello@framer.com"
+                href="mailto:haider@teamadver.com"
                 className="group w-fit font-satoshi text-[15px] md:text-[16px] text-agency-grey/80 font-medium hover:text-agency-grey transition-colors mb-2"
               >
                 <span className="relative overflow-hidden inline-flex pb-[2px]">
-                  hello@framer.com
+                  haider@teamadver.com
                   <span className="absolute left-0 bottom-0 w-full h-[1.5px] bg-agency-grey -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
                 </span>
               </a>
               {/* Sliding Underline Phone */}
               <a
-                href="tel:+12345678910"
+                href="https://wa.me/+923331374637"
                 className="group w-fit font-satoshi text-[15px] md:text-[16px] text-agency-grey/80 font-medium hover:text-agency-grey transition-colors"
               >
                 <span className="relative overflow-hidden inline-flex pb-[2px]">
-                  +1 (234) 567-8910
+                  +92 333 1374637
                   <span className="absolute left-0 bottom-0 w-full h-[1.5px] bg-agency-grey -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
                 </span>
               </a>
@@ -159,66 +163,14 @@ export default function Footer() {
 
           {/* Social Icons (Using FlipIcon Component) */}
           <div className="flex items-center gap-4">
-            <FlipIcon href="#">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
+            <FlipIcon href="https://www.instagram.com/teamadver/">
+              <FiInstagram size={22} strokeWidth={1.5} />
             </FlipIcon>
-            <FlipIcon href="#">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path>
-              </svg>
+            <FlipIcon href="https://www.facebook.com/share/14fQNGKhb5C/">
+              <FiFacebook size={22} strokeWidth={1.5} />
             </FlipIcon>
-            <FlipIcon href="#">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-            </FlipIcon>
-            <FlipIcon href="#">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-              </svg>
+            <FlipIcon href="https://www.linkedin.com/company/team-adver/">
+              <FiLinkedin size={22} strokeWidth={1.5} />
             </FlipIcon>
           </div>
         </div>
@@ -226,44 +178,11 @@ export default function Footer() {
         {/* Divider */}
         <div className="w-full h-[1px] bg-agency-grey/20 my-8 md:my-10" />
 
-        {/* BOTTOM SECTION: Copyright & Links */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-0">
+        {/* BOTTOM SECTION: Copyright */}
+        <div className="flex justify-center items-center w-full">
           {/* Copyright */}
-          <div className="order-2 md:order-1 font-satoshi font-medium text-[13px] md:text-[14px] text-agency-grey/80 tracking-wide">
-            © 2025 Templyo - All right reserved
-          </div>
-
-          {/* Policies with Sliding Underline */}
-          <div className="order-1 md:order-2 flex flex-col md:flex-row items-start md:items-center gap-4 font-satoshi font-medium text-[13px] md:text-[14px] text-agency-grey/80">
-            <Link
-              href="#"
-              className="group hover:text-agency-grey transition-colors"
-            >
-              <span className="relative overflow-hidden inline-flex pb-[2px]">
-                Terms & Conditions
-                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-agency-grey -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
-              </span>
-            </Link>
-            <span className="hidden md:inline text-agency-grey/40">•</span>
-            <Link
-              href="#"
-              className="group hover:text-agency-grey transition-colors"
-            >
-              <span className="relative overflow-hidden inline-flex pb-[2px]">
-                Privacy Policy
-                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-agency-grey -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
-              </span>
-            </Link>
-            <span className="hidden md:inline text-agency-grey/40">•</span>
-            <Link
-              href="#"
-              className="group hover:text-agency-grey transition-colors"
-            >
-              <span className="relative overflow-hidden inline-flex pb-[2px]">
-                Refund Policy
-                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-agency-grey -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
-              </span>
-            </Link>
+          <div className="font-satoshi font-medium text-[13px] md:text-[14px] text-agency-grey/80 tracking-wide text-center">
+            © 2026 TeamAdver - All rights reserved
           </div>
         </div>
       </div>

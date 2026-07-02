@@ -13,9 +13,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 // 1. Adapted Link Component for the Light Theme
-const ProjectLinkLight = ({ text, className }) => (
+const ProjectLinkLight = ({ text, href = "#project", className }) => (
   <Link
-    href="#project"
+    href={href}
     className={`flex items-center gap-2 group cursor-pointer w-fit ${className}`}
   >
     <span className="font-satoshi font-bold text-[14px] md:text-[15px] !text-agency-grey relative overflow-hidden">
@@ -98,7 +98,7 @@ const ProjectCardLight = ({ project }) => {
           >
             {project.desc}
           </p>
-          <ProjectLinkLight text="See Project" className="hidden md:flex" />
+          <ProjectLinkLight text="See Project" href={`/works/${project.slug}`} className="hidden md:flex" />
         </div>
       </div>
 
@@ -122,7 +122,7 @@ const ProjectCardLight = ({ project }) => {
         </motion.div>
 
         <div className="flex justify-end w-full mt-5 md:hidden">
-          <ProjectLinkLight text="Learn More" />
+          <ProjectLinkLight text="Learn More" href={`/works/${project.slug}`} />
         </div>
       </div>
     </motion.div>

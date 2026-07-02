@@ -52,7 +52,7 @@ export default function Footer() {
                 Together
                 {/* Premium Arrow Button */}
                 <Link
-                  href="#contact"
+                  href="/contact"
                   className="relative flex items-center justify-center w-10 h-10 md:w-14 md:h-14 border-[1.5px] border-agency-grey/30 rounded-lg overflow-hidden group hover:border-agency-grey hover:bg-agency-grey/10 transition-all duration-300 -mt-1 md:-mt-3"
                 >
                   <svg

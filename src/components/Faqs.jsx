@@ -161,7 +161,7 @@ export default function FAQ() {
 
               {/* Contact Us Animated Link */}
               <Link
-                href="#contact"
+                href="/contact"
                 className="flex items-center gap-2 group cursor-pointer"
               >
                 <span className="font-satoshi font-bold text-[14px] md:text-[15px] !text-agency-light relative overflow-hidden">

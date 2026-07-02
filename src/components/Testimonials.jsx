@@ -122,7 +122,7 @@ export default function Testimonials() {
               {/* Bottom Buttons Area */}
               <div className="flex flex-wrap items-center gap-6 mt-8 md:mt-10">
                 <Link
-                  href="#contact"
+                  href="/contact"
                   className="flex items-center gap-2 group cursor-pointer w-fit"
                 >
                   <span className="font-satoshi font-bold text-[14px] md:text-[15px] text-agency-grey relative overflow-hidden">

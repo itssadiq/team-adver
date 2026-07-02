@@ -84,7 +84,7 @@ export default function Services() {
             {/* NEW Button Hover Effect: Premium sliding arrows */}
             <div className="mt-6 md:mt-0 self-end md:mb-4">
               <Link
-                href="#contact"
+                href="/contact"
                 aria-label="Start a new project with our creative agency"
                 className="flex items-center gap-2 group cursor-pointer"
               >

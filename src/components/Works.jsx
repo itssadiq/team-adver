@@ -44,9 +44,9 @@ const FlipText = ({ children }) => (
 );
 
 // Animated Link Component
-const ProjectLink = ({ text, className }) => (
+const ProjectLink = ({ text, href = "#project", className }) => (
   <Link
-    href="#project"
+    href={href}
     className={`flex items-center gap-2 group cursor-pointer w-fit ${className}`}
   >
     <span className="font-satoshi font-bold text-[14px] md:text-[15px] !text-agency-light relative overflow-hidden">
@@ -127,7 +127,7 @@ const ProjectCard = ({ project }) => {
           >
             {project.desc}
           </p>
-          <ProjectLink text="See Project" className="hidden md:flex" />
+          <ProjectLink text="See Project" href={`/works/${project.slug}`} className="hidden md:flex" />
         </div>
       </div>
 
@@ -150,7 +150,7 @@ const ProjectCard = ({ project }) => {
           />
         </motion.div>
         <div className="flex justify-end w-full mt-5 md:hidden">
-          <ProjectLink text="Learn More" />
+          <ProjectLink text="Learn More" href={`/works/${project.slug}`} />
         </div>
       </div>
     </motion.div>

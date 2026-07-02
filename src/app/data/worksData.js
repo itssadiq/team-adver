@@ -21,20 +21,20 @@ export const worksData = [
   },
   {
     id: 2,
-    slug: "lumen-atelier",
-    date: "Feb 2025",
-    category: "BRANDING",
-    title: "Lumen Atelier",
-    desc: "A strategic brand identity mapping the future of luxury sustainable fashion.",
-    fullDesc: "Lumen Atelier is at the forefront of luxury sustainable fashion. Our goal was to create a strategic brand identity that resonated with eco-conscious consumers without compromising the high-end appeal. The visual language was carefully crafted to balance modern minimalism with organic textures, setting a new standard in the sustainable luxury market.",
-    mainImg: "https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=2000&auto=format&fit=crop",
+    slug: "stitchnstyle-leather",
+    date: "Apr 2026",
+    category: "Web Development",
+    title: "Stitch n Style Leather",
+    desc: "A complete ecommerce website from scratch with integrated payments and custom product options. Designed to support direct sales and personalized orders..",
+    fullDesc: "A full ecommerce website from scratch for a leather products brand targeting the US market. Integrated PayPal and card payment systems to enable smooth online transactions. Implemented a custom product customization feature to handle personalized orders. Structured the store for clear product presentation and user flow. Built and launched independently while working within an agency team environment.",
+    mainImg: "/projects/Stitchnstyle-site.png",
     align: "right",
     features: [
-      "Comprehensive Brand Strategy and positioning",
-      "Minimalist Logo Design with custom typography",
-      "Eco-friendly Packaging Design concepts",
-      "Art Direction for sustainable fashion campaigns",
-      "Digital Brand Guidelines for cross-channel consistency"
+      "Configured products, variations, categories, and inventory structure.",
+      "Integrated PayPal and card checkout with proper flow and validation.",
+      "Implemented product-level customization form with admin-side data handling.",
+      "Built product and shop layouts using Elementor components.",
+      "Handled testing, checkout validation, and production deployment."
     ]
   },
   {
